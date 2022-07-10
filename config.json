@@ -1,6 +1,6 @@
 {
   "main_token": process.env.TOKEN, 
-  "mongodb_url": "mongodb+srv://johnfries:Marsbar1000+@cluster0.yej5qxf.mongodb.net/?retryWrites=true&w=majority", 
+  "mongodb_url": "", 
   "developers": ["630070645874622494", ""], 
   "datadogApiKey": "", 
   "dashboard":"false", 
