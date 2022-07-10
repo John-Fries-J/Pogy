@@ -21,8 +21,7 @@ if(maintenance && maintenance.toggle == "true"){
 logger.info(`✅ loaded Maintenance Mode `, { label: 'Status' })
 } else {
     const activities = [
-      { name: 'p!help | pogy.xyz', type: 'WATCHING' }, 
-      { name: '@pogy', type: 'WATCHING' }
+      { name: 'p!help', type: 'WATCHING' }, 
     ];
   
 
