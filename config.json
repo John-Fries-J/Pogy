@@ -1,13 +1,13 @@
 {
-  "main_token": process.env.TOKEN, 
+  "main_token": "", 
   "mongodb_url": "", 
   "developers": ["630070645874622494", ""], 
   "datadogApiKey": "", 
   "dashboard":"false", 
   "prefix":"!", 
   "arc":"", 
-  "youtube_key":"AIzaSyBhVUEeMurqCGVX0dT6pwyWMhToUPDWrks", 
-  "cat_api_key":"dbde1117-c70d-4042-8e6f-2e908eb5c933",
-  "webhook_id":"995481958366859435", 
-  "webhook_url":"I5da9FgkpGsQ23uIU7pJRsbKAtX-ekYOt7kYc0vh6sU6vSLnukxDYk-yfYCV9AB-RcqK" 
+  "youtube_key":"", 
+  "cat_api_key":"",
+  "webhook_id":"995656181290905701", 
+  "webhook_url":"WMx33mLEMpcUEX54QqMxTmRl-2WNWqQ1a4HVHq_A34bccATvOZvWk6VLVPMAxSnED4I7" 
 }
