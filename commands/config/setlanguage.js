@@ -11,7 +11,7 @@ module.exports = class extends Command {
         description: 'Set a guild language',
         category: 'Config',
         guildOnly: true,
-        userPermission: ['MANAGE_GUILD'],
+        userPermission: ['ADMINISTRATOR'],
       });
     }
 

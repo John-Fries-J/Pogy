@@ -3,13 +3,15 @@ const fetch = require('node-fetch');
 const Guild = require('../../database/schemas/Guild');
 const { MessageEmbed } = require('discord.js');
 const send = require(`../../packages/logs/index.js`)
+
 module.exports = class extends Command {
     constructor(...args) {
       super(...args, {
         name: 'say',
         description: 'Make the bot send a message!',
         category: 'Fun',
-        cooldown: 3
+        cooldown: 3,
+        userPermission: ['MANAGE_GUILD'],
       });
     }
 

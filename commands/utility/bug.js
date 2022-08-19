@@ -11,7 +11,7 @@ module.exports = class extends Command {
       super(...args, {
         name: 'reportbug',
         aliases: ['bugreport', 'bug'],
-        description: 'Report bugs to Pogy!',
+        description: 'Report bugs to John!',
         category: 'Utility',
         usage: [ '<text>' ],
         cooldown: 60
@@ -67,7 +67,7 @@ let report = args.join(' ').split('').join('')
       .addField('Member', message.member, true)
       .addField('Message', report, true)
       .addField('Bug Report ID:', `#${id}`, true)
-      .setFooter(`https://pogy.xyz`)
+      .setFooter(``)
       .setTimestamp()
       .setColor('GREEN');
     

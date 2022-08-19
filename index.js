@@ -8,13 +8,13 @@ const Pogy = new PogyClient(config);
 const color = require("./data/colors");
 Pogy.color = color;
 
-Pogy.domain = domain.domain || `https://pogy.xyz`;
+Pogy.domain = domain.domain || `Awating Domain`;
 
 const emoji = require("./data/emoji");
 Pogy.emoji = emoji;
 
 let client = Pogy
-const jointocreate = require("./structures/jointocreate");
+const jointocreate = require("./structures/jointocreate.js");
 jointocreate(client);
 
 Pogy.react = new Map()

@@ -21,19 +21,19 @@ if(maintenance && maintenance.toggle == "true"){
 logger.info(`✅ loaded Maintenance Mode `, { label: 'Status' })
 } else {
     const activities = [
-      { name: 'p!help | pogy.xyz', type: 'WATCHING' }, 
-      { name: '@pogy', type: 'WATCHING' }
+      { name: '!help', type: 'WATCHING' }, 
+      { name: '!help', type: 'WATCHING' }
     ];
   
 
-    this.client.user.setPresence({ status: 'online', activity: activities[0] });
+    this.client.user.setPresence({ status: 'DND', activity: activities[0] });
   
     let activity = 1;
   
 
     setInterval(() => {
-      activities[2] = { name: `p!help | ${ this.client.guilds.cache.size} guilds`, type: 'WATCHING' };
-      activities[3] = { name: `p!help | ${ this.client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} users`, type: 'WATCHING' }; 
+      activities[2] = { name: `!help`, type: 'WATCHING' };
+      activities[3] = { name: `!help`, type: 'WATCHING' }; 
       if (activity > 3) activity = 0;
       this.client.user.setActivity(activities[activity]);
       activity++;

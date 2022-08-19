@@ -35,18 +35,18 @@ module.exports = class extends Command {
       const prefix = guildDB.prefix;
 
       if(guildDB.isPremium == "false"){
-      return message.channel.send(new MessageEmbed().setColor(message.guild.me.displayHexColor).setDescription(`${fail} Slow down here, the current command is only for premium guilds.\n\n[Check Premium Here](https://pogy.xyz/premium)`))}
+      return message.channel.send(new MessageEmbed().setColor(message.guild.me.displayHexColor).setDescription(`${fail} Slow down here, the current command is only for premium guilds.\n\n[Check Premium Here](/premium)`))}
 
   const missingPermEmbed = new MessageEmbed()
   .setAuthor(`Missing User Permissions`, message.author.displayAvatarURL())
   .setDescription(`${fail} The following command the **Administrator** Permission`)
-  .setFooter(`https://pogy.xyz`)
+  .setFooter(``)
    .setColor(client.color.red)
 
    let properUsage = new MessageEmbed()
         .setColor(message.guild.me.displayHexColor)
         .setDescription(`__**Proper Usage**__\n\n\`1-\` ${prefix}rrdm on\n\`2-\` ${prefix}rrdm off`)
-        .setFooter('https://pogy.xyz')
+        .setFooter('')
 
       if (args.length < 1) {
         return message.channel.send(properUsage);
@@ -61,7 +61,7 @@ module.exports = class extends Command {
  if(guild.reactionDM === false) return message.channel.send(new MessageEmbed()
    .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} DMs are already disabled`)
-  .setFooter(`https://pogy.xyz`)
+  .setFooter(``)
    .setColor(client.color.red)
  )
         guild.updateOne({
@@ -72,7 +72,7 @@ module.exports = class extends Command {
 message.channel.send(new MessageEmbed()
    .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${success} Reaction Role DMs have been disabled!`)
-  .setFooter(`https://pogy.xyz`)
+  .setFooter(``)
    .setColor(client.color.red)
  )
     })
@@ -86,7 +86,7 @@ message.channel.send(new MessageEmbed()
  if(guild.reactionDM === true) return message.channel.send(new MessageEmbed()
    .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${fail} DMs are already enabled`)
-  .setFooter(`https://pogy.xyz`)
+  .setFooter(``)
    .setColor(client.color.red))
         guild.updateOne({
           reactionDM: true
@@ -97,7 +97,7 @@ message.channel.send(new MessageEmbed()
 message.channel.send(new MessageEmbed()
    .setAuthor(message.author.tag, message.author.displayAvatarURL())
   .setDescription(`${success} Reaction Role DMs have been enabled!`)
-  .setFooter(`https://pogy.xyz`)
+  .setFooter(``)
    .setColor(client.color.red)
  )
 

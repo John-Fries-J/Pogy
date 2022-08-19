@@ -6,7 +6,7 @@ module.exports = class extends Command {
       super(...args, {
         name: 'invite',
         aliases: [ 'inv' ],
-        description: 'Sends you Pogys invite link',
+        description: 'Sends you ys invite link',
         category: 'Utility',
         cooldown: 3
       });
@@ -21,7 +21,7 @@ module.exports = class extends Command {
       
       const embed = new MessageEmbed()
         .setColor(message.guild.me.displayHexColor)
-        .setDescription(`${language.invite}(https://pogy.xyz/invite) ${message.client.emoji.success}`);
+        .setDescription(`${language.invite}(/invite) ${message.client.emoji.success}`);
 
       await message.channel.send(embed)  
     }

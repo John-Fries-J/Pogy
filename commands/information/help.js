@@ -45,7 +45,7 @@ module.exports = class extends Command {
         owner: `${emojis.owner}`
       };
      
-      const green = '<:purple:826033456207233045>';
+      const green = '<:Shark:672496396238192678>';
       const red = '<:redsquare:803527843661217802>';
 
       const settings = await Guild.findOne({
@@ -53,7 +53,7 @@ module.exports = class extends Command {
       });
 
       const embed = new MessageEmbed()
-        .setColor('PURPLE')
+        .setColor('BLUE')
 
 
       if (!args || args.length < 1) {
@@ -68,9 +68,9 @@ module.exports = class extends Command {
         for (const category of categories) {
           embed.addField(`${emoji[category.split(" ").join("").toLowerCase()]} **${capitalize(category)}**`, `\`${prefix}help ${category.toLowerCase()}\``, true)
         }
-        embed.setTitle(`Pogy's Command List`)
+        embed.setTitle(`Command List`)
         embed.setDescription(stripIndent`
-        <:purple:826033456207233045> The Prefix for this server is \`${prefix}\`
+        <:Shark:672496396238192678> The Prefix for this server is \`${prefix}\`
   
         `);
 
@@ -78,13 +78,6 @@ module.exports = class extends Command {
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
 
-
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
      
 
@@ -96,12 +89,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-        embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       } else if(args && args[0].toLowerCase() == "owner"){
@@ -116,12 +103,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-        embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       } else if(args && args[0].toLowerCase() == "applications"  || args && args[0].toLowerCase() == "apps"){
@@ -134,12 +115,6 @@ embed.addField(
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
 
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
       
         return message.channel.send(embed)
 
@@ -153,12 +128,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       } else if(args && args[0].toLowerCase() == "utility"  || args && args[0].toLowerCase() == "utils"){
@@ -170,12 +139,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       
@@ -188,12 +151,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       
@@ -206,12 +163,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       
@@ -224,12 +175,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
       
@@ -241,12 +186,6 @@ embed.addField(
 
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         return message.channel.send(embed)
 
         } else if(args && args[0].toLowerCase() == "moderation"  || args && args[0].toLowerCase() == "mod"){
@@ -256,49 +195,6 @@ embed.addField(
             cmd.category.toLowerCase() === "moderation").map(cmd => `${cmd.disabled || disabledCommands.includes(cmd.name || cmd) ? red : green} \`${cmd.name} ${" ".repeat(11 - Number(cmd.name.length))}:\` ${cmd.description}`).join("\n"));
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
-        return message.channel.send(embed)
-
-      
-        } else if(args && args[0].toLowerCase() == "nsfw"){
-
-
-        embed.setTitle(` ${emojis.nsfw} - NSFW`)
-            embed.setDescription(this.client.commands.filter(cmd => 
-            cmd.category.toLowerCase() === "nsfw").map(cmd => `${cmd.disabled || disabledCommands.includes(cmd.name || cmd) ? red : green} \`${cmd.name} ${" ".repeat(9 - Number(cmd.name.length))}:\` ${cmd.description}`).join("\n"));
-
-        embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
-        embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
-      if(!message.channel.nsfw) embed.setDescription(`The following Menu only belongs to NSFW Channels 👀`)
-        return message.channel.send(embed)
-
-      } else if(args && args.slice(0).join(" ").toLowerCase() == "reaction role" || args && args[0].toLowerCase() == "rr"){
-
-        embed.setTitle(` ${emojis.reactionrole} - Reaction Roles`)
-        embed.setDescription(this.client.commands.filter(cmd => 
-      
-            cmd.category.toLowerCase() === "reaction role").map(cmd => `${cmd.disabled || disabledCommands.includes(cmd.name || cmd) ? red : green} \`${cmd.name} ${" ".repeat(12 - Number(cmd.name.length))}:\` ${cmd.description}`).join("\n"));
-
-        embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
-        embed.setTimestamp()
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
-      
         return message.channel.send(embed)
 
         } else if(args && args[0].toLowerCase() == "tickets" || args && args[0].toLowerCase() == "ticketing"){
@@ -307,12 +203,6 @@ embed.addField(
         embed.setDescription(this.client.commands.filter(cmd => 
       
             cmd.category.toLowerCase() === "tickets").map(cmd => `${cmd.disabled || disabledCommands.includes(cmd.name || cmd) ? red : green} \`${cmd.name} ${" ".repeat(11 - Number(cmd.name.length))}:\` ${cmd.description}`).join("\n"));
-embed.addField(
-        '\u200b', 
-        '**[Invite](https://invite.pogy.xyz) | ' +
-        '[Support Server](https://pogy.xyz/support) | ' +
-        '[Dashboard](https://pogy.xyz/dashboard)**'
-      );
         embed.setFooter(`Requested by ${message.author.username}`, message.author.displayAvatarURL({ dynamic: true }))
         embed.setTimestamp()
 
@@ -343,7 +233,7 @@ embed.addField(
 
         if(cmd.aliases && cmd.aliases.length && typeof(cmd.aliases) === "array") embed.addField('Aliases', cmd.aliases.map(alias => `\`${alias}\``, true).join(', '), true)
         if(cmd.cooldown && cmd.cooldown > 1) embed.addField('Cooldown', `\`${cmd.cooldown}s\``, true)
-        if(cmd.examples && cmd.examples.length) embed.addField('__**Examples**__', cmd.examples.map(example => `<:purple:826033456207233045> \`${example}\``).join('\n'))
+        if(cmd.examples && cmd.examples.length) embed.addField('__**Examples**__', cmd.examples.map(example => `<:Shark:672496396238192678> \`${example}\``).join('\n'))
   
         
         return message.channel.send(embed)

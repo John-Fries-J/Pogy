@@ -10,6 +10,7 @@
     "eslint-config-tesseract": "^0.0.3"
   },
   "dependencies": {
+    "@discordjs/rest": "^1.0.1",
     "@top-gg/sdk": "^3.0.8",
     "ascii-table": "0.0.9",
     "axios": "^0.21.1",

@@ -17,7 +17,7 @@ module.exports = class extends Event {
 
       const embed = new MessageEmbed()
         .setColor('RED')
-        .setDescription(`Pogy: [${this.client.shard.ids - 1 + 2}/${this.client.shard.count}] Disconnected`)
+        .setDescription(`SharkBot: [${this.client.shard.ids - 1 + 2}/${this.client.shard.count}] Disconnected`)
         .setTimestamp()
       
       webhookClient.send(embed)

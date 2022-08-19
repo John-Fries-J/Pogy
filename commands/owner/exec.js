@@ -14,9 +14,9 @@ module.exports = class extends Command {
   }
 
   async run(message, args) {
-    if (message.content.includes('config.json')) return message.channel.send('<:sbdeny:736927045522817106> Due to privacy reasons, we can\'t show the config.json file.');
+    if (message.content.includes('config.json')) return message.channel.send('❌ Due to privacy reasons, we can\'t show the config.json file.');
 
-    if (args.length < 1) return message.channel.send('<:sbdeny:736927045522817106> You have to give me some text to execute!')
+    if (args.length < 1) return message.channel.send('❌ You have to give me some text to execute dummy!')
     
     exec(args.join(' '), (error, stdout) => {
       const response = stdout || error;

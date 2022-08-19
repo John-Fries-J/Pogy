@@ -78,11 +78,9 @@ module.exports = class extends Event {
         const proofita = `\`\`\`css\n[     Prefix: ${settings.prefix || '!'}     ]\`\`\``;
         const proofitaa = `\`\`\`css\n[      Help: ${settings.prefix || '!'}help    ]\`\`\``;
         const embed = new MessageEmbed()
-          .setTitle('Hello, I\'m Pogy. What\'s Up?')
+          .setTitle('Hello, I\'m Sharkbot. What\'s Up?')
           .addField(`Prefix`,proofita, true)
           .addField(`Usage`,proofitaa, true)
-          .setDescription(`\nIf you like Pogy, Consider [voting](https://top.gg/bot/767705905235099658), or [inviting](https://discord.com/oauth2/authorize?client_id=767705905235099658&scope=bot&permissions=470150262) it to your server! Thank you for using Pogy, we hope you enjoy it, as we always look forward to improve the bot`)
-          .setFooter('Thank you for using Pogy!!')
           .setColor('#FF2C98')
         message.channel.send(embed);
       }
@@ -221,7 +219,7 @@ if(maintenance && maintenance.toggle == "true") {
  
 if(maintenanceCooldown.has(message.author.id)) return;
 
-message.channel.send(`Pogy is currently undergoing maintenance which won't allow anyone to access Pogy's Commands. Feel free to try again later. For updates: https://discord.gg/FqdH4sfKBg`)
+message.channel.send(`Sharkbot is currently undergoing maintenance which won't allow anyone to access Sharkbots's Commands. Feel free to try again later.`)
 
 maintenanceCooldown.add(message.author.id);
 setTimeout(() => {
@@ -289,7 +287,7 @@ return message.channel.send(embed)
       if (customCommandSettings && customCommandSettings.name && !customCommandSettings.description && customCommandSettings.json == "true") {
   if (userBlacklistSettings && userBlacklistSettings.isBlacklisted)  return;
         const command = JSON.parse(customCommandSettings.content)
-        return message.channel.send(command).catch((e)=>{message.channel.send(`There was a problem sending your embed, which is probably a JSON error.\nRead more here --> https://pogy.xyz/embeds\n\n__Error:__\n\`${e}\``)})
+        return message.channel.send(command).catch((e)=>{message.channel.send(`There was a problem sending your embed, which is probably a JSON error.`)})
       }
 
       if (command) {
@@ -330,7 +328,7 @@ return message.channel.send(embed)
         }
         
         let number = Math.floor((Math.random() * 10) + 1);
-        if (typeof rateLimit === "string") return message.channel.send(` ${message.client.emoji.fail} Please wait **${rateLimit}** before running the **${cmd}** command again - ${message.author}\n\n${number === 1 ? "*Did You know that Pogy has its own dashboard? `https://pogy.xyz/dashboard`*" : ""}${number === 2 ? "*You can check our top.gg page at `https://vote.pogy.xyz`*" : ""}`).then((s)=>{
+        if (typeof rateLimit === "string") return message.channel.send(` ${message.client.emoji.fail} Please wait **${rateLimit}** before running the **${cmd}** command again - ${message.author}\n\n${number === 1 ? "" : ""}`).then((s)=>{
           message.delete().catch(()=>{});
           s.delete({timeout: 4000}).catch(()=>{})
         }).catch(()=>{})
@@ -347,7 +345,7 @@ return message.channel.send(embed)
         .setTitle(`<:wrong:822376943763980348> Missing Bot Permissions`)
         .setDescription(`Command Name: **${command.name}**\nRequired Permission: **${missingPermissions.map(p => `${p}`).join(' - ')}**`)
         .setTimestamp()
-        .setFooter('https://pogy.xyz')
+        .setFooter('')
         .setColor(message.guild.me.displayHexColor);
       return message.channel.send(embed).catch(()=>{})
           }
@@ -366,7 +364,7 @@ return message.channel.send(embed)
           .setTitle(`<:wrong:822376943763980348> Missing User Permissions`)
           .setDescription(`Command Name: **${command.name}**\nRequired Permission: **${missingPermissions.map(p => `${p}`).join('\n')}**`)
           .setTimestamp()
-          .setFooter('https://pogy.xyz')
+          .setFooter('')
           .setColor(message.guild.me.displayHexColor);
        return message.channel.send(embed).catch(()=>{})
       }
@@ -383,7 +381,7 @@ if(config.datadogApiKey){
        metrics.increment('commands_served');
 }
 
-        if (command.disabled) return message.channel.send(`The owner has disabled the following command for now. Try again Later!\n\nFor Updates: https://discord.gg/duBwdCvCwW`)
+        if (command.disabled) return message.channel.send(`The owner has disabled the following command for now. Try again Later!\n\n`)
         if (command.nsfwOnly && !message.channel.nsfw && message.guild) return message.channel.send(`${nsfwplease[Math.round(Math.random() * (nsfwplease.length - 1))]}`)
 
         Statcord.ShardingClient.postCommand(cmd, message.author.id, this.client);
@@ -412,7 +410,7 @@ if(config.datadogApiKey){
           return message.channel.send(`${message.client.emoji.fail} Missing bot Permissions - **Embeds Links**`)
 
         const command = this.client.commands.get(cmd.toLowerCase()) || this.client.commands.get(this.client.aliases.get(cmd.toLowerCase()));
-        logger.info(`"${message.content}" (${command.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`, { label: 'Command' })
+        logger.info(`\`"${message.content}" (${command.name}) ran by "${message.author.tag}" (${message.author.id})"channel "#${message.channel.name}" (${message.channel.id})\``, { label: 'Commands' })
       
         await command.run(message, args)
     }

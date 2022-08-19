@@ -27,15 +27,8 @@ module.exports = class extends Command {
       await message.channel.send(new MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
       .setTitle(`${language.serversettings1}`)
-      .addField(`Main Settings`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id})`, true)
-      .addField(`Welcome & Leave`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/welcome)`, true)
-      .addField(`Logging`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/logging)`, true)
-      .addField(`Autorole`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/autorole)`, true)
-      .addField(`Alt Detector`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/altdetector)`, true)
-      .addField(`Tickets`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/tickets)`, true)
-      .addField(`Suggestions`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/Suggestions)`, true)
-      .addField(`Server Reports`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/reports)`, true)
-      .addField(`Automod`, `[\`Click here\`](https://pogy.xyz/dashboard/${message.guild.id}/automod)`, true)
+      .addField(`Settings`, `This is not set up`, true)
+  
 
       .setFooter(`${message.guild.name}`)
 

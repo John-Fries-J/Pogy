@@ -33,7 +33,7 @@ module.exports = class extends Command {
       .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
       .setDescription(`${language.properusage} \`${prefix}autoResponse <command-name> <text-reply>\`\n\n${language.example} \`${prefix}autoResponse ping pong\``)
       .setTimestamp()
-      .setFooter('https://pogy.xyz')
+      .setFooter('')
       .setColor(message.guild.me.displayHexColor));
 
       let name = namee.toLowerCase()
@@ -42,7 +42,7 @@ module.exports = class extends Command {
       .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
       .setDescription(`${language.properusage} \`${prefix}autoResponse <command-name> <text-reply>\`\n\n${language.example} \`${prefix}autoResponse ping pong\``)
       .setTimestamp()
-      .setFooter('https://pogy.xyz')
+      .setFooter('')
       .setColor(message.guild.me.displayHexColor));
 
   
@@ -57,7 +57,7 @@ if(guildDB.isPremium === "false"){
 const results = await autoResponse.find(conditional)
 
 if(results.length >= 10){
-message.channel.send(new MessageEmbed().setColor(message.guild.me.displayHexColor).setDescription(`${message.client.emoji.fail} Auto Response Limit Reached **(10)**\n\n[Upgrade Premium Here for unlimited commands](https://pogy.xyz/premium)`))
+message.channel.send(new MessageEmbed().setColor(message.guild.me.displayHexColor).setDescription(`${message.client.emoji.fail} Auto Response Limit Reached **(10)**\n\n[Upgrade Premium Here for unlimited commands](/premium)`))
 
   return;
 }
@@ -75,7 +75,7 @@ message.channel.send(new MessageEmbed().setColor(message.guild.me.displayHexColo
     .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
     .setDescription(`**${language.cc3}** ${name}\n\nDelete the following auto response using \`${prefix}deleteresponse <command-name>\``)
     .setTimestamp()
-    .setFooter('https://pogy.xyz')
+    .setFooter('')
     .setColor(message.guild.me.displayHexColor))
         } 
         else {

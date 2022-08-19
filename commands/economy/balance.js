@@ -23,8 +23,8 @@ module.exports = class extends Command {
     const guildDB = await Guild.findOne({
         guildId: message.guild.id
     });
-    const errorEmbed = new discord.MessageEmbed().setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ format: 'png'})).setColor(client.color.red).setFooter("https://pogy.xyz").setTimestamp()
-    const successEmbed = new discord.MessageEmbed().setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ format: 'png'})).setColor(client.color.green).setFooter("https://pogy.xyz").setTimestamp()
+    const errorEmbed = new discord.MessageEmbed().setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ format: 'png'})).setColor(client.color.red).setFooter("").setTimestamp()
+    const successEmbed = new discord.MessageEmbed().setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ format: 'png'})).setColor(client.color.green).setFooter("").setTimestamp()
 
     
     let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member

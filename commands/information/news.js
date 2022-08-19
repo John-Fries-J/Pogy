@@ -9,7 +9,7 @@ module.exports = class extends Command {
     constructor(...args) {
       super(...args, {
         name: 'news',
-        description: `Shows Pogy's latest news`,
+        description: `Shows  latest news`,
         category: 'Information',
         cooldown: 3
       });
@@ -34,9 +34,9 @@ module.exports = class extends Command {
         
         let embed = new MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
-      .setTitle(`Pogy News`)
-      .setDescription(`***__${language.datePublished}__ ${moment(guildDB.time).format("dddd, MMMM Do YYYY")}*** *__[\`(${moment(guildDB.time).fromNow()})\`](https://pogy.xyz)__*\n\n ${guildDB.news}`)
-      .setFooter('https://pogy.xyz')
+      .setTitle(`News`)
+      .setDescription(`***__${language.datePublished}__ ${moment(guildDB.time).format("dddd, MMMM Do YYYY")}*** *__[\`(${moment(guildDB.time).fromNow()})\`*\n\n ${guildDB.news}`)
+      .setFooter('')
       .setTimestamp();
 
       message.channel.send(embed).catch(() => {

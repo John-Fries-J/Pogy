@@ -1,6 +1,6 @@
 module.exports = {
  "verification": "",
- "description": "Pogy is a multi-purpose discord bot ready to skill up and boost up your Discord server!",
+ "description": "SharkBot Looks after Shark's Discord",
  "domain": "", // domain
  "google_analitics": "", // google analitics
  "token": process.env.TOKEN,

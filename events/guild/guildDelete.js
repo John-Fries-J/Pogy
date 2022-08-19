@@ -27,7 +27,7 @@ module.exports = class extends Event {
     .setFooter(`${this.client.guilds.cache.size} guilds `,  'https://pogy.xyz/logo.png');
 
 welcomeClient.send({
-   username: 'Pogy',
+   username: 'SharkBot',
         avatarURL: 'https://pogy.xyz/logo.png',
         embeds: [welcomeEmbed],
 })
@@ -49,7 +49,7 @@ if(config.datadogApiKey){
       .addField('Server Owner', `${guild.owner} / ${guild.ownerID}`)
     
       webhookClient.send({
-        username: 'Pogy',
+        username: 'SharkBot',
         avatarURL: 'https://pogy.xyz/logo.png',
         embeds: [embed],
       });

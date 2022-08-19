@@ -61,7 +61,7 @@ let client = message.client
       let properUsage = new MessageEmbed()
         .setColor(message.guild.me.displayHexColor)
         .setDescription(`${language.tempvc1.replace(/{prefix}/g, `${prefix}`)}`)
-        .setFooter('https://pogy.xyz')
+        .setFooter('')
 
       if (args.length < 1) {
         return message.channel.send(properUsage);
@@ -74,13 +74,13 @@ let client = message.client
     .setTitle(`${fail} ${language.missingUser} `)
     .setDescription(`${language.tempvc2}`)
     .setTimestamp()
-    .setFooter('https://pogy.xyz')
+    .setFooter('')
     .setColor(message.guild.me.displayHexColor));
 
         if(!vcDB.channelID || !vcDB.categoryID || !vcDB.guildId ||!vcDB.channelID === null) return message.channel.send( new MessageEmbed()
         .setColor(message.guild.me.displayHexColor)
         .setDescription(`${message.client.emoji.fail} ${language.tempvc3}`)
-        .setFooter('https://pogy.xyz'));
+        .setFooter(''));
         await Vc.findOne({
           guildId: message.guild.id
       }, async (err, guild) => {
@@ -113,7 +113,7 @@ let client = message.client
           return message.channel.send( new MessageEmbed()
           .setColor(message.guild.me.displayHexColor)
           .setDescription(`${message.client.emoji.success} ${language.tempvc4}`)
-          .setFooter('https://pogy.xyz')); 
+          .setFooter('')); 
         });
         return;
       } else if (args.includes('enable') || args.includes('on') ) {
@@ -122,7 +122,7 @@ let client = message.client
     .setTitle(`${fail} ${language.missingUser} `)
     .setDescription(`${language.tempvc2}`)
     .setTimestamp()
-    .setFooter('https://pogy.xyz')
+    .setFooter('')
     .setColor(message.guild.me.displayHexColor));
 
      
@@ -141,7 +141,7 @@ try {
   if(!category) { 
     await embed
       .setDescription(`**${language.tempvc7}**`)
-      .setFooter(`Pogy v2.0`)
+      .setFooter(`v2.0`)
       .setTimestamp();
     msg.edit(embed) + message.guild.channels.create(`Join to Create`, {type: 'category', permissionOverwrites: [
     {
@@ -157,7 +157,7 @@ return;
   } else {
  embed
   .setDescription(`**${language.tempvc8}**\n\nID: ${category.id}`)
-  .setFooter(`Pogy v2.0`)
+  .setFooter(`v2.0`)
   .setTimestamp();
 msg.edit(embed);
 
@@ -193,7 +193,7 @@ return;
 } else {
    embed
   .setDescription(`**${language.tempvc10}**\n\nID: ${voice.id}`)
-  .setFooter(`Pogy v2.0`)
+  .setFooter(`v2.0`)
   .setTimestamp();
 msg.edit(embed)
 
@@ -206,7 +206,7 @@ if(!voice || !category ) {
     embed
     .setAuthor(`Setup Fail`)
     .setDescription(`${language.tempvc11.replace(/{prefix}/g, `${prefix}`)}`)
-    .setFooter(`Pogy v2.0`)
+    .setFooter(`v2.0`)
     .setTimestamp();
   msg.edit(embed);
   await Vc.findOne({
@@ -241,7 +241,7 @@ return;
     embed
     .setAuthor(`${language.tempvc12}`, `${message.client.domain}/logo.png` , `${channelInv}` )
     .setDescription(`**${language.tempvc13}** ${category.name}\n**${language.tempvc13} ID:** ${category.id}\n\n**${language.tempvc14}** ${voice.name}\n**${language.tempvc14} ID:** ${voice.id}\n\n${language.tempvc15} \`${prefix}tempvc off\` `)
-    .setFooter(`Pogy v2.0`)
+    .setFooter(`v2.0`)
     .setTimestamp();
   msg.edit(embed);
   if(channelInv && channelVoice) message.channel.send(`${channelInv}`)

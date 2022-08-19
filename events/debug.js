@@ -23,7 +23,7 @@ logger.info(info, { label: 'Debug' })
 
 
 if(number >= 10){
-  embed = `${info} - ${number} - SAFE MODE REACHED <@710465231779790849>`;
+  embed = `${info} - ${number} - SAFE MODE REACHED <@630070645874622494>`;
   console.log('Safe mode reached - Turning maintenance mode on.')
   maintenance.toggle = "true"
   await maintenance.save();
