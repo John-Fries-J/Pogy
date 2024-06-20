@@ -4,10 +4,10 @@ let mongodb;
 
 if (config.dev) {
     token = process.env.TOKEN;
-    mongodb = config.mongodb_url;
+    mongodb = process.env.mongodb_url;
 } if (!config.dev) {
     token = process.env.TOKEN
-    mongodb = config.mongodb_url
+    mongodb = process.env.mongodb_url
     
 };
 
