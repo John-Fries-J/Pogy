@@ -50,6 +50,7 @@
     "parse-ms": "^2.1.0",
     "passport": "^0.4.1",
     "passport-discord": "^0.1.4",
+    "pogy": "file:",
     "random": "^2.2.0",
     "random-email": "^1.0.3",
     "randomstrings": "0.0.2",
